@@ -5,6 +5,6 @@ export function Home() {
   const navigate = useNavigate();
   useEffect(() => {
     navigate("/gym");
-  }, []);
+  }, [navigate]);
   return <div id="home"></div>;
 }

@@ -1,5 +1,4 @@
-  
-  .show-list {
+.show-list {
     height: fit-content;
     /* margin: 30px; */
     width: 100%;
@@ -7,30 +6,32 @@
     background-color: black;
     display: flex;
     justify-content: start;
-  }
-  .left-for-location {
-    margin-left: 10px;
+    padding: 20px;
+}
+
+.left-for-location {
     height: fit-content;
     box-sizing: border-box;
     width: 30%;
     text-align: start;
-  }
-  .right-for-list {
+}
+
+.right-for-list {
     height: fit-content;
     width: 60%;
-  }
-  .heading-filter {
+}
+
+.heading-filter {
     font-size: 40px;
     margin-left: 20px;
     margin-bottom: 15px;
-  }
-  .heading-location {
+}
+
+.heading-location {
     font-size: 25px;
-    margin-left: 20px;
-    margin-bottom: 15px;
-  
-  }
-  .location-search-bar {
+}
+
+.location-search-bar {
     margin-top: 4%;
     border-radius: 5px;
     height: 50px;
@@ -40,8 +41,9 @@
     color: white;
     background-color: black;
     border: 2px solid white;
-  }
-  .select-search-bar {
+}
+
+.select-search-bar {
     margin-top: 4%;
     border-radius: 5px;
     height: 50px;
@@ -50,9 +52,10 @@
     padding-left: 20px;
     color: white;
     background-color: black;
-    border: 2px solid white; 
-  }
-  .price-search-bar {
+    border: 2px solid white;
+}
+
+.price-search-bar {
     margin-right: 2%;
     margin-top: 4%;
     border-radius: 5px;
@@ -63,5 +66,4 @@
     padding-left: 10px;
     background-color: black;
     border: 2px solid white;
-  }
-  
+}
