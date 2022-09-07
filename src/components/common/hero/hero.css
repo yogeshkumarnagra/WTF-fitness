@@ -1,0 +1,22 @@
+.hero {
+    /* background-image: url('../../../public/images.jpg'); */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    min-height: 60vh;
+    background: linear-gradient(to right, rgb(128, 8, 8), black);
+}
+
+.hero-banner {
+    font-size: 400px;
+    color: transparent;
+    -webkit-text-stroke-width: 4px;
+    -webkit-text-stroke-color: rgb(159, 7, 7);
+}
+
+.banner-gym {
+    font-size: 300px;
+    color: white;
+    right: 5%;
+    font-weight: bold;
+    bottom: 0;
+}

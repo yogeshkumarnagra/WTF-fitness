@@ -1,0 +1,23 @@
+.header {
+    background-color: black;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    /* background-image: url('../../../public/images.jpg'); */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding: 10px;
+    height: 70px;
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+}
+
+.nav-section {
+    margin: 25px;
+    color: rgb(133, 128, 128);
+    text-decoration: none;
+}
+
+.nav-section:hover {
+    color: white !important;
+}
