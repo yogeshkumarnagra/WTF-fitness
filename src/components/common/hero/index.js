@@ -5,7 +5,7 @@ import running_boy from "../../../images/running_boy.png";
 
 export function Hero() {
   return (
-    <div className="hero relative">
+    <div className="hero relative d-flex justify-center align-center">
       <span className="hero-banner absolute white">Powered</span>
       <div className="absolute d-flex justify-around w-100 h-100">
         <img className="running" src={running_girl} alt="runnig-girl" />

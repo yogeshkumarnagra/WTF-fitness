@@ -26,8 +26,29 @@ export const data = {
         { option: "Noida", value: "noida" },
         { option: "Gurgao", value: "gurgao" },
         { option: "New Delhi", value: "new-delhi" },
-        { option: "Faridabad", value: "faridabad" },
+        { option: "Gazibad", value: "gaziabad" },
       ],
     },
   ],
 };
+
+export const gymsData = [
+  {
+    name: "WTF : Hybrid Gym",
+    price: 3000,
+    time: "for 3 months",
+    available: true,
+    free: true,
+    address: "sec-23, noida UP",
+    distance: "2KM away",
+  },
+  {
+    name: "WTF : Militry Gym",
+    price: 3500,
+    time: "for 3 months",
+    available: true,
+    free: true,
+    address: "sec-22, Gurgaon Haryana",
+    distance: "8KM away",
+  },
+];
