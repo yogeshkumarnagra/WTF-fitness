@@ -52,3 +52,24 @@ export const gymsData = [
     distance: "8KM away",
   },
 ];
+
+export const footerData = {
+  fields: [
+    {
+      heading: "Quick",
+      links: [
+        "About",
+        "FAQs",
+        "Privacy Policy",
+        "WTF in News",
+        "Term & condition",
+        "Refund & cancellation",
+      ],
+    },
+    { heading: "Explore", links: ["Arenas", "Studios", "Nutrition"] },
+    {
+      heading: "Contact",
+      links: ["Address 1", "Address 2", "Mobile No.", "Email"],
+    },
+  ],
+};
