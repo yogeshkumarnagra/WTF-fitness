@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./gym.css";
-import { InputSearchBar } from "../../components/common";
+import { Experiences, InputSearchBar } from "../../components/common";
 import { Hero } from "../../components/common";
 import { AllGyms, GymHelper } from "../../components";
 
@@ -51,6 +51,7 @@ export const Gym = () => {
         <GymHelper handleSearch={handleSearch} />
         <AllGyms nearestGym={gyms} />
       </div>
+      <Experiences />
     </div>
   );
 };

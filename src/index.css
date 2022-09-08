@@ -129,6 +129,26 @@ code {
     width: 50%;
 }
 
+.w-30 {
+    width: 30%;
+}
+
+.w-70 {
+    width: 70%;
+}
+
 .bg-black {
     background-color: #0d0d0d;
+}
+
+.lighter {
+    font-weight: lighter;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.m-15 {
+    margin: 15px;
 }

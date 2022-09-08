@@ -30,6 +30,12 @@ export const data = {
       ],
     },
   ],
+  gymCards: [
+    { content: "Modern Eqipments", img: 1 },
+    { content: "Skilled Trainers", img: 2 },
+    { content: "Top Class Ambiance", img: 3 },
+    { content: "senitized GYMS", img: 4 },
+  ],
 };
 
 export const gymsData = [

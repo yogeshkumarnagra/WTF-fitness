@@ -1,0 +1,20 @@
+.experiences {
+    background: linear-gradient(to right, red, rgb(246, 96, 96));
+    padding: 0px 50px;
+}
+
+.expty-red {
+    width: 70px;
+    height: 200px;
+    background: rgb(246, 96, 96);
+}
+
+.box {
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(to bottom, rgb(240, 38, 38), rgb(246, 96, 96));
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    font-size: large;
+}
