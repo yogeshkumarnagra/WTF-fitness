@@ -5,8 +5,8 @@ import { Hero } from "../../components/common";
 import { AllGyms, GymHelper } from "../../components";
 
 export const Gym = () => {
+  const [allGymsData, setAllGymsData] = useState("");
   const [gyms, setGyms] = useState("");
-  const [search, setSearch] = useState(false);
 
   useEffect(() => {
     if (!gyms) {
@@ -14,34 +14,18 @@ export const Gym = () => {
         .then((res) => res.json())
         .then((data) => {
           if (data.status) {
+            setAllGymsData(data.data);
             setGyms(data.data);
           }
         });
     }
   }, []);
 
-  useEffect(() => {
-    if (search) {
-      fetch("https://api.wtfup.me/gym/places")
-        .then((res) => res.json())
-        .then((data) => {
-          if (data.status) {
-            setGyms(data.data);
-          }
-        });
-    }
-  }, [search]);
-
   const handleSearch = (e) => {
-    if (!e.target.value) {
-      setSearch(true);
-    } else {
-      setSearch(false);
-      const filterData = gyms.filter((element) =>
-        element.city.toLowerCase().includes(e.target.value)
-      );
-      setGyms(filterData);
-    }
+    const filterData = allGymsData.filter((element) =>
+      element.city.toLowerCase().includes(e.target.value)
+    );
+    setGyms(filterData);
   };
   return (
     <div className="">
