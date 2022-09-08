@@ -1,7 +1,6 @@
 import React from "react";
 import free from "../../images/free.gif";
 export const AllGyms = ({ nearestGym }) => {
-  console.log(nearestGym);
   return (
     <div className="right-for-list">
       <div className="overflow-auto h-500">

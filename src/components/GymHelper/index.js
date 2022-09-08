@@ -9,39 +9,37 @@ export const GymHelper = ({ handleSearch }) => {
         <div className={`heading-filters`}>Filters</div>
         {searchFields.map((field) => {
           return (
-            <>
-              <div
-                className={`heading-${field.name.toLocaleLowerCase()} mb-20`}
-              >
-                {field.name}
-                <div>
-                  {field.type === "select" ? (
-                    <select className="select-search-bar">
-                      {field.selectFields.map((sltField) => {
-                        return (
-                          <option key={sltField.value} value={sltField.value}>
-                            {sltField.option}
-                          </option>
-                        );
-                      })}
-                    </select>
-                  ) : (
-                    field.inputField.map((txtfield) => {
+            <div
+              key={`heading-${field.name.toLocaleLowerCase()}`}
+              className={`heading-${field.name.toLocaleLowerCase()} mb-20`}
+            >
+              {field.name}
+              <div>
+                {field.type === "select" ? (
+                  <select className="select-search-bar">
+                    {field.selectFields.map((sltField) => {
                       return (
-                        <input
-                          className={`${field.name.toLocaleLowerCase()}-search-bar`}
-                          type={field.type}
-                          onChange={
-                            field.name === "Location" ? handleSearch : ""
-                          }
-                          placeholder={txtfield.placeholder}
-                        />
+                        <option key={sltField.value} value={sltField.value}>
+                          {sltField.option}
+                        </option>
                       );
-                    })
-                  )}
-                </div>
+                    })}
+                  </select>
+                ) : (
+                  field.inputField.map((txtfield) => {
+                    return (
+                      <input
+                        key={field.name.toLocaleLowerCase()}
+                        className={`${field.name.toLocaleLowerCase()}-search-bar`}
+                        type={field.type}
+                        onChange={field.name === "Location" ? handleSearch : ""}
+                        placeholder={txtfield.placeholder}
+                      />
+                    );
+                  })
+                )}
               </div>
-            </>
+            </div>
           );
         })}
       </div>
