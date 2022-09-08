@@ -43,19 +43,10 @@ export const Gym = () => {
       setGyms(filterData);
     }
   };
-  // useEffect(() => {
-  //   fetch("https://api.wtfup.me/gym/places")
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       if (data.status) {
-  //         setGyms(data.data);
-  //       }
-  //     });
-  // }, []);
   return (
     <div className="">
       <Hero />
-      <InputSearchBar width={90} />
+      <InputSearchBar width={90} handleSearch={handleSearch} />
       <div className="show-list">
         <GymHelper handleSearch={handleSearch} />
         <AllGyms nearestGym={gyms} />

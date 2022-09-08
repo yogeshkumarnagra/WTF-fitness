@@ -5,14 +5,18 @@
     justify-content: space-around;
     background-color: black;
     color: white;
-  }
-  .footer-heading {
+}
+
+.footer-heading {
     font-size: 30px;
-  }
-  .mid-div1 {
+}
+
+.mid-div1 {
     text-align: start;
-  }
-  .footer-list {
+}
+
+.footer-list {
     margin: 10px;
     font-size: 18px;
-  }
+    cursor: pointer;
+}
