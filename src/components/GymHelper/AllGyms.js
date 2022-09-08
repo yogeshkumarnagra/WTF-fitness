@@ -9,9 +9,9 @@ export const AllGyms = ({ nearestGym }) => {
             city.addressComponent.map((gym) => (
               <div
                 key={gym.address1}
-                className="gym-list-div d-flex flex-row w-100 justify-between m-10"
+                className="gym-list-div d-flex flex-row  justify-between m-10"
               >
-                <div className="w-20 justify-center align-center d-flex">
+                <div className="w-20  d-flex">
                   <img src={free} width={50} height={50} alt="free" />
                 </div>
                 <div className="w-50">

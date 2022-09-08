@@ -82,7 +82,7 @@
 }
 
 .gym-list-div {
-    background-color: rgb(43, 42, 42);
+    background: linear-gradient(to right, rgb(43, 42, 42), rgb(28, 1, 1));
     margin: 10px;
     border-radius: 10px;
     padding: 10px;

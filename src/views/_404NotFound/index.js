@@ -6,12 +6,14 @@ export const PageNotFound = () => {
   return (
     <>
       <div className="page-not-found d-flex justify-center align-center bg-base w-100 h-100">
-        OPPS! Page Not created yet.
-        <span className="redirect-url">
-          <Link className="redirect-url" to={"/gym"}>
-            Home
-          </Link>
-        </span>
+        <div>
+          <div>OOPS! Page Not Created Yet.</div>
+          <div className="redirect-url d-flex justify-center">
+            <Link className="redirect-url " to={"/gym"}>
+              Back to Home
+            </Link>
+          </div>
+        </div>
       </div>
     </>
   );
