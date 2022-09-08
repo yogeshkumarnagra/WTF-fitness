@@ -14,6 +14,7 @@ export const Gym = () => {
         .then((res) => res.json())
         .then((data) => {
           if (data.status) {
+            console.log(data.data);
             setGyms(data.data);
           }
         });

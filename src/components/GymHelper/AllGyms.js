@@ -1,6 +1,7 @@
 import React from "react";
 import free from "../../images/free.gif";
 export const AllGyms = ({ nearestGym }) => {
+  console.log(nearestGym);
   return (
     <div className="right-for-list">
       <div className="overflow-auto h-500">
@@ -17,8 +18,9 @@ export const AllGyms = ({ nearestGym }) => {
                 <div className="w-50">
                   <div className="innner-div">
                     <div className="heading">{gym.address1}</div>
+                    <div>{city.city}</div>
                     <div>{gym.country}</div>
-                    <div>{gym.pin}</div>
+                    <div>Pin Code-{gym.pin}</div>
                   </div>
                   <div className="button-div">
                     <button className="submit-button">Book Now</button>
