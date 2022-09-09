@@ -24,6 +24,7 @@ export const Gym = () => {
   }, []);
 
   function handleSearch(e, field) {
+    if (e.target.value.length === 0) setGyms(allGymsData);
     const searchData = allGymsData.filter((element) => {
       return (
         element[field].toLowerCase().includes(e.target.value) ||
@@ -33,6 +34,7 @@ export const Gym = () => {
     setGyms(searchData);
   }
   function handleFilter(e, field) {
+    if (e.target.value.length === 0) setGyms(allGymsData);
     let filterData = "";
     if (field === "Cities") {
       filterData = allGymsData.filter((ele) => {
