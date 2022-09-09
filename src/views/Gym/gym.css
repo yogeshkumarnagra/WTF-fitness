@@ -43,7 +43,8 @@
     border: 2px solid white;
 }
 
-.select-search-bar {
+.select-search-bar,
+select {
     margin-top: 4%;
     border-radius: 5px;
     height: 50px;
@@ -53,6 +54,12 @@
     color: white;
     background-color: black;
     border: 2px solid white;
+    grid-area: select;
+}
+
+.option {
+    position: relative;
+    overflow-x: scroll;
 }
 
 .price-search-bar {

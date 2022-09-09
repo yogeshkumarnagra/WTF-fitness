@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./gym.css";
 import { Experiences, InputSearchBar } from "../../components/common";
 import { Hero } from "../../components/common";
@@ -11,13 +11,11 @@ export const Gym = () => {
   useEffect(() => {
     let url =
       "https://devapi.wtfup.me/gym/nearestgym?lat=30.325488815850512&long=78.0042384802231";
-    // let url2 = "https://api.wtfup.me/gym/places";
     if (!gyms) {
       fetch(url)
         .then((res) => res.json())
         .then((data) => {
           if (data.status) {
-            // console.log(data);
             setAllGymsData(data.data);
             setGyms(data.data);
           }
@@ -25,20 +23,54 @@ export const Gym = () => {
     }
   }, []);
 
-  const handleSearch = (e) => {
-    const filterData = allGymsData.filter((element) =>
-      element.city.toLowerCase().includes(e.target.value)
-    );
+  function handleSearch(e, field) {
+    const searchData = allGymsData.filter((element) => {
+      return (
+        element[field].toLowerCase().includes(e.target.value) ||
+        element[field] === e.target.value
+      );
+    });
+    setGyms(searchData);
+  }
+  function handleFilter(e, field) {
+    let filterData = "";
+    if (field === "Cities") {
+      filterData = allGymsData.filter((ele) => {
+        if (
+          e.target.value.includes(
+            ele.address1 +
+              "," +
+              ele.address2 +
+              "," +
+              ele.country +
+              "," +
+              ele.pin
+          )
+        ) {
+          return true;
+        }
+      });
+    } else if (field === "Location") {
+      filterData = allGymsData.filter((ele) =>
+        ele.city.toLowerCase().includes(e.target.value)
+      );
+    }
     setGyms(filterData);
-  };
+  }
   return (
     <>
       <section className="gym-wrapper">
         <Hero />
         <section className="middel-section">
-          <InputSearchBar width={90} handleSearch={handleSearch} />
+          <InputSearchBar
+            width={90}
+            handleSearch={(e) => handleSearch(e, "gym_name")}
+          />
           <div className="filters-gymList">
-            <GymFilters handleSearch={handleSearch} />
+            <GymFilters
+              handleFilter={handleFilter}
+              handleSearch={handleSearch}
+            />
             <AllGyms nearestGym={gyms} />
           </div>
         </section>

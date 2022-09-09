@@ -3,8 +3,6 @@ import { GymCard } from "./GymCard";
 import "./gymHelper.css";
 
 export const AllGyms = ({ nearestGym }) => {
-  console.log(nearestGym);
-  // return null;
   return (
     <div className="right-for-list">
       <div className="overflow-auto h-500">

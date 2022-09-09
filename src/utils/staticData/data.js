@@ -21,13 +21,6 @@ export const data = {
     {
       name: "Cities",
       type: "select",
-      selectFields: [
-        { option: "select City", value: "" },
-        { option: "Noida", value: "noida" },
-        { option: "Gurgao", value: "gurgao" },
-        { option: "New Delhi", value: "new-delhi" },
-        { option: "Gazibad", value: "gaziabad" },
-      ],
     },
   ],
   gymCards: [
