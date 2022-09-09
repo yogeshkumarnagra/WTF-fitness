@@ -7,17 +7,3 @@
 .gym-card-right {
     padding: 15px 5px;
 }
-
-.button-div {
-    display: flex;
-    justify-content: end;
-}
-
-.button-div button {
-    background-color: rgb(129, 14, 14);
-    border-radius: 10px;
-    width: 200px;
-    height: 80px;
-    color: white;
-    margin-top: 10px;
-}

@@ -1,6 +1,8 @@
 import React from "react";
+import { Button } from "../../common";
 
 export const GymRightCard = ({ gym }) => {
+  const handler = () => {};
   return (
     <div className="gym-card-right w-50">
       <div className="innner-div">
@@ -15,7 +17,20 @@ export const GymRightCard = ({ gym }) => {
         </div>
       </div>
       <div className="button-div">
-        <button className="submit-button">Book Now</button>
+        <Button
+          btnProps={{
+            btnStyles: {
+              width: "150px",
+              height: "50px",
+              background:
+                "linear-gradient(to right, rgb(114,2,2), rgb(230, 41, 41))",
+              borderRadius: "4px",
+              color: "white",
+            },
+            innertext: "Book Now",
+            handler: handler,
+          }}
+        />
       </div>
     </div>
   );

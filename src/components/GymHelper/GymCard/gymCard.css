@@ -2,3 +2,8 @@
     font-size: larger;
     font-weight: bold;
 }
+
+.button-div {
+    display: flex;
+    justify-content: end;
+}
