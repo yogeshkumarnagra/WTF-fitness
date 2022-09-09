@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { data } from "../../utils";
+import { Button } from "../common";
 
 export const GymFilters = ({ handleFilter, handleSearch }) => {
   const [gymPlaces, setgymPlaces] = useState([]);
   const [selectedCity, setSelectedCity] = useState("");
   const [subLocation, setSubLocation] = useState([]);
+  const [searchValue, setSearchValue] = useState("");
   const searchFields = data.searchFields;
 
   const selectCityhandler = (e) => {
@@ -15,6 +17,13 @@ export const GymFilters = ({ handleFilter, handleSearch }) => {
   const resetHandler = () => {
     setSelectedCity("");
     setSubLocation([]);
+    setSearchValue("");
+  };
+
+  const onchangeHandler = (e, name, placeholder) => {
+    if (name === "Price") handleFilter(e, placeholder);
+    else handleFilter(e, name);
+    setSearchValue(e.target.value);
   };
 
   useEffect(() => {
@@ -38,8 +47,25 @@ export const GymFilters = ({ handleFilter, handleSearch }) => {
   return (
     <>
       <div className="left-for-location">
-        <div className={`heading-filters`}>Filters</div>
-        <button onClick={resetHandler}>Reset</button>
+        <div className="heading-filters d-flex justify-between">
+          <div>Filters</div>
+          {(gymPlaces.length || selectedCity.length) && (
+            <Button
+              btnProps={{
+                btnStyles: {
+                  width: "100px",
+                  height: "40px",
+                  background:
+                    "linear-gradient(to right, rgb(114,2,2), rgb(230, 41, 41))",
+                  borderRadius: "4px",
+                  color: "white",
+                },
+                innertext: "Reset",
+                handler: resetHandler,
+              }}
+            />
+          )}
+        </div>
         {searchFields.length &&
           searchFields.map((field) => {
             return (
@@ -75,11 +101,10 @@ export const GymFilters = ({ handleFilter, handleSearch }) => {
                           key={field.name.toLocaleLowerCase()}
                           className={`${field.name.toLocaleLowerCase()}-search-bar`}
                           type={field.type}
-                          onChange={
-                            field.name === "Price"
-                              ? (e) => handleFilter(e, txtfield.placeholder)
-                              : (e) => handleFilter(e, field.name)
+                          onChange={(e) =>
+                            onchangeHandler(e, field.name, txtfield.placeholder)
                           }
+                          value={searchValue}
                           placeholder={txtfield.placeholder}
                         />
                       );
