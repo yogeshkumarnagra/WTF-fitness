@@ -1,8 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { Button } from "../../common";
 
 export const GymRightCard = ({ gym }) => {
-  const handler = () => {};
+  const navigate = useNavigate();
+  const handler = () => {
+    navigate("/book-now");
+  };
   return (
     <div className="gym-card-right w-50">
       <div className="innner-div">
