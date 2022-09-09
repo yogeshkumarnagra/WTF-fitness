@@ -1,4 +1,4 @@
-.show-list {
+.filters-gymList {
     height: fit-content;
     /* margin: 30px; */
     width: 100%;
@@ -66,24 +66,4 @@
     padding-left: 10px;
     background-color: black;
     border: 2px solid white;
-}
-
-.button-div {
-    display: flex;
-    justify-content: end;
-}
-
-.button-div button {
-    background-color: rgb(129, 14, 14);
-    border-radius: 10px;
-    width: 200px;
-    height: 80px;
-    color: white;
-}
-
-.gym-list-div {
-    background: linear-gradient(to right, rgb(43, 42, 42), rgb(28, 1, 1));
-    margin: 10px;
-    border-radius: 10px;
-    padding: 10px;
 }

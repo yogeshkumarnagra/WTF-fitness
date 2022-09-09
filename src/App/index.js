@@ -14,7 +14,7 @@ export function App() {
       setTimer(
         setTimeout(() => {
           setIsLoader(false);
-        }, 5000)
+        }, 500)
       );
     } else {
       setTimer(clearTimeout(timer));
@@ -22,7 +22,9 @@ export function App() {
   }, [isLoader]);
   return (
     <div className="App ">
-      <Navbar navFields={data.navFields} />
+      <nav>
+        <Navbar navFields={data.navFields} />
+      </nav>
       {isLoader && <Loader />}
       {!isLoader && (
         <Routes>
