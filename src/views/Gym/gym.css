@@ -5,8 +5,8 @@
     color: white;
     background-color: black;
     display: flex;
-    justify-content: start;
-    padding: 20px;
+    justify-content: center;
+    padding: 10px;
 }
 
 .left-for-location {
