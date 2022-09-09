@@ -49,7 +49,9 @@ export const GymFilters = ({ handleFilter, handleSearch }) => {
       <div className="left-for-location">
         <div className="heading-filters d-flex justify-between">
           <div>Filters</div>
-          {(gymPlaces.length || selectedCity.length) && (
+          {(selectedCity.length > 0 ||
+            subLocation.length > 0 ||
+            searchValue) && (
             <Button
               btnProps={{
                 btnStyles: {
