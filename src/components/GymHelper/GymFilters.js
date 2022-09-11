@@ -10,6 +10,7 @@ export const GymFilters = ({ handleFilter, handleSearch }) => {
   const searchFields = data.searchFields;
 
   const selectCityhandler = (e) => {
+    setSubLocation([]);
     setSelectedCity(e.target.value);
     handleSearch(e, "city");
   };
@@ -49,9 +50,7 @@ export const GymFilters = ({ handleFilter, handleSearch }) => {
       <div className="left-for-location">
         <div className="heading-filters d-flex justify-between">
           <div>Filters</div>
-          {(selectedCity.length > 0 ||
-            subLocation.length > 0 ||
-            searchValue) && (
+          {(selectedCity || subLocation.length || searchValue) && (
             <Button
               btnProps={{
                 btnStyles: {

@@ -11,7 +11,7 @@ export const GymRightCard = ({ gym }) => {
     <div className="gym-card-right w-50">
       <div className="innner-div">
         <div className="heading">{gym.gym_name}</div>
-        {gym.rating > 0 && <div>{gym.rating}</div>}
+        {gym.rating > 0 && <div>Ratings: {gym.rating}</div>}
         <div>
           {gym.address1}, {gym.address2}, {gym.city}
         </div>
