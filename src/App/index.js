@@ -14,7 +14,7 @@ export function App() {
       setTimer(
         setTimeout(() => {
           setIsLoader(false);
-        }, 500)
+        }, 5000)
       );
     } else {
       setTimer(clearTimeout(timer));
