@@ -1,6 +1,6 @@
 import React from "react";
-import { GymCard } from "./GymCard";
-import "./gymHelper.css";
+import { GymCard } from "../GymCard";
+import "./allgyms.css";
 
 export const AllGyms = ({ nearestGym }) => {
   return (

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState } from "react";
 import "./gym.css";
 import { Experiences, InputSearchBar } from "../../components/common";
 import { Hero } from "../../components/common";
